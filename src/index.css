@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* Opcional: Garante que o fundo seja branco por padrão */
+@layer base {
+  body {
+    /* Cor de fundo base e cor do texto */
+    @apply bg-slate-50 text-slate-900;
+    
+    /* Efeito de fundo pontilhado profissional */
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Muda a cor de quando o usuário seleciona/grifa um texto na tela */
+  ::selection {
+    @apply bg-orange-500 text-white;
+  }
+}
