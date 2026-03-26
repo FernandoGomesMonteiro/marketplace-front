@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 export const Navbar: React.FC = () => {
   return (
     <nav className="w-full bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
@@ -7,7 +9,7 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+          <Link to="/" className="flex-shrink-0 flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity">
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-600/20">
               {/* Ícone genérico simulando um painel/raio */}
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -17,11 +19,11 @@ export const Navbar: React.FC = () => {
             <span className="font-extrabold text-2xl text-slate-900 tracking-tight">
               Tech<span className="text-blue-600">B2B</span>
             </span>
-          </div>
+          </Link>
 
           {/* Menu Desktop */}
           <div className="hidden md:flex space-x-8 items-center">
-            <a href="#" className="text-slate-600 hover:text-blue-600 font-semibold transition-colors">Início</a>
+            <Link to="/" className="text-slate-600 hover:text-blue-600 font-semibold transition-colors">Início</Link>
             <a href="#" className="text-slate-600 hover:text-blue-600 font-semibold transition-colors">Painéis Elétricos</a>
             <a href="#" className="text-slate-600 hover:text-blue-600 font-semibold transition-colors">Climatização</a>
             <a href="#" className="text-slate-600 hover:text-blue-600 font-semibold transition-colors">Documentação</a>
@@ -32,9 +34,9 @@ export const Navbar: React.FC = () => {
             <button className="text-slate-500 hover:text-slate-900 font-semibold px-3 py-2 transition-colors">
               Entrar
             </button>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-lg font-bold transition-all shadow-md shadow-orange-500/20 transform hover:-translate-y-0.5">
+            <Link to="/montar-painel" className="bg-orange-500 hover:bg-orange-600 text-white flex items-center px-5 py-2.5 rounded-lg font-bold transition-all shadow-md shadow-orange-500/20 transform hover:-translate-y-0.5">
               Nova Cotação
-            </button>
+            </Link>
           </div>
 
           {/* Menu Mobile (Ícone Hamburguer) */}
